@@ -20,14 +20,14 @@ public class HealthBar : MonoBehaviour
     public void TakeHealth()
     {
         _target = _health.value + DividerDirection(_addHealth);
-        TryGetCoroutine();
+        HaveCoroutine();
         _coroutine = StartCoroutine(ChangeHealth(_target, _addHealth));
     }
 
     public void TakeDamage()
     {
         _target = _health.value - DividerDirection(_damage);
-        TryGetCoroutine();
+        HaveCoroutine();
         _coroutine = StartCoroutine(ChangeHealth(_target, _damage));
     }
 
@@ -46,7 +46,7 @@ public class HealthBar : MonoBehaviour
         return direction /= divider;
     }
 
-    private Coroutine TryGetCoroutine()
+    private Coroutine HaveCoroutine()
     {
         if (_coroutine != null)
         {
