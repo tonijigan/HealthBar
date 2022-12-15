@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 55341004}
   - component: {fileID: 55341003}
   - component: {fileID: 55341002}
+  - component: {fileID: 55341006}
   - component: {fileID: 55341005}
   m_Layer: 0
   m_Name: Canvas
@@ -236,12 +237,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 55341000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85e4445fdf352e14ab55fd46055fc258, type: 3}
+  m_Script: {fileID: 11500000, guid: d13d72e866f5cb8448c8006cf1c947e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _health: {fileID: 1536397398}
   _addHealth: 10
   _damage: 10
+--- !u!114 &55341006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55341000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e4445fdf352e14ab55fd46055fc258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   _changeSliderSpeed: 0.03
 --- !u!1 &265091708
 GameObject:
@@ -943,7 +956,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 55341005}
-        m_TargetAssemblyTypeName: HealthBar, Assembly-CSharp
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: TakeHealth
         m_Mode: 1
         m_Arguments:
@@ -1189,7 +1202,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 55341005}
-        m_TargetAssemblyTypeName: HealthBar, Assembly-CSharp
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
         m_Arguments:
