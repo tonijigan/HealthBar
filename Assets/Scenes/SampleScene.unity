@@ -240,9 +240,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d13d72e866f5cb8448c8006cf1c947e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: {fileID: 1536397398}
+  _health: 100
   _addHealth: 10
   _damage: 10
+  _takeHealth:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 55341006}
+        m_TargetAssemblyTypeName: HealthBar, Assembly-CSharp
+        m_MethodName: TakeSliderValue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _takeDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 55341006}
+        m_TargetAssemblyTypeName: HealthBar, Assembly-CSharp
+        m_MethodName: DecreaseSliderValue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &55341006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,7 +285,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85e4445fdf352e14ab55fd46055fc258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _changeSliderSpeed: 0.03
+  _slider: {fileID: 1536397398}
+  _changeSliderSpeed: 3
 --- !u!1 &265091708
 GameObject:
   m_ObjectHideFlags: 0
